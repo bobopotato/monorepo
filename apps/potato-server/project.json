@@ -1,0 +1,24 @@
+{
+  "name": "potato-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/potato-server/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "potato-server:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "potato-server:build:development"
+        },
+        "production": {
+          "buildTarget": "potato-server:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
